@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "repository": "Nota-themes",
+  "release": "v0.6.0",
+  "generated_at": "2026-10-18T09:10:00Z",
+  "packages": [
+    {
+      "id": "nota-ui-themes",
+      "type": "interface",
+      "version": "0.6.0",
+      "file": "nota-ui-themes-0.6.0.zip",
+      "sha256": "01cd917fb8a00be4f98d9d6a77c081f161c9fe07ff332c791beceb6a8a685580",
+      "url": "https://github.com/Nota-MD/Nota-themes/releases/download/v0.6.0/nota-ui-themes-0.6.0.zip"
+    },
+    {
+      "id": "nota-document-themes",
+      "type": "document",
+      "version": "0.6.0",
+      "file": "nota-document-themes-0.6.0.zip",
+      "sha256": "489f2b71f729a81fb8e18ad1bb657ce68624953b44a7aac82ea5c4b0b16cb978",
+      "url": "https://github.com/Nota-MD/Nota-themes/releases/download/v0.6.0/nota-document-themes-0.6.0.zip"
+    }
+  ],
+  "interface_themes": [
+    "adwaita",
+    "ghub",
+    "plasma",
+    "macos",
+    "windows",
+    "windows10",
+    "yaru",
+    "cde"
+  ],
+  "document_themes": [
+    "adwaita",
+    "minimal",
+    "latex",
+    "cde"
+  ]
+}
