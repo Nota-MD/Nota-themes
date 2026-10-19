@@ -37,8 +37,11 @@
 
 /* 窗口最外框。右下角的深蓝灰属于真机画布，外框本身仍是棕 + 奶油两道。 */
 [data-ui-style="cde"] .app {
-  border: 1px solid var(--frame-dark);
-  box-shadow: inset 1px 1px 0 var(--frame-light);
+  border: 2px solid var(--frame-dark);
+  box-shadow:
+    inset 1px 1px 0 var(--frame-light),
+    inset -1px -1px 0 #8d8582,
+    inset 2px 2px 0 #ffffff;
   /* WebKitGTK 实际会忽略这两条，真正生效的是 EBDT 字模；保留它们是为了
      在支持字体平滑开关的 Windows WebView2 上别把 1-bit 边缘再洗成灰阶。 */
   -webkit-font-smoothing: none;
@@ -94,18 +97,24 @@
 
 /* 顶栏：桃色硬帽、连续青绿菜单带，底缘按真机压“暗青 → 桃色 → 画布”。 */
 [data-ui-style="cde"] .toolbar {
-  height: 34px;
-  padding: 5px 4px 4px;
-  border-top: 3px solid var(--accent);
-  border-bottom: 1px solid var(--bevel-dark);
-  background: var(--bg);
+  height: 38px;
+  padding: 5px 4px 3px;
+  border-top: 4px solid var(--accent);
+  border-bottom: 2px solid var(--frame-dark);
+  background: var(--bg-raised);
   box-shadow:
-    inset 0 1px 0 var(--frame-light),
-    inset 0 -2px 0 var(--accent);
+    inset 1px 1px 0 #ffffff,
+    inset -1px 0 0 #8d8582;
 }
 
 [data-ui-style="cde"] .menubar {
   gap: 0;
+  height: 27px;
+  padding: 1px;
+  background: #4992a7;
+  box-shadow:
+    inset 1px 1px 0 #adced7,
+    inset -1px -1px 0 #244953;
 }
 
 [data-ui-style="cde"] .toolbar-dock-toggle {
@@ -130,10 +139,13 @@
 /* 弹层：暗青外框 + 奶油亮边，条目紧贴，没有任何圆角或柔光。 */
 [data-ui-style="cde"] :is(.menu-popup, .menu-sub, .context-menu, .context-sub) {
   padding: 0;
-  border: 1px solid var(--bevel-dark);
+  border: 2px solid var(--bevel-dark);
   border-radius: 0;
   background: var(--bg);
-  box-shadow: 1px 1px 0 var(--frame-light);
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #8d8582,
+    2px 2px 0 #3f3a39;
 }
 
 [data-ui-style="cde"] .menu-item {
@@ -145,7 +157,8 @@
 
 [data-ui-style="cde"] .menu-item:hover:not(:disabled),
 [data-ui-style="cde"] .menu-item-open:not(:disabled) {
-  background: var(--bg-subtle);
+  background: #4992a7;
+  color: #ffffff;
   box-shadow: var(--bevel-sunken);
 }
 
@@ -175,9 +188,9 @@
 /* 格式栏：图标键凸起，当前标记持续凹下，不随鼠标移开复原。 */
 [data-ui-style="cde"] .format-bar {
   padding: 4px 6px;
-  border-top: 1px solid var(--bevel-light);
+  border-top: 1px solid #ffffff;
   border-bottom: 2px solid var(--bevel-dark);
-  background: var(--bg-subtle);
+  background: var(--bg-raised);
 }
 
 [data-ui-style="cde"] .format-btn {
@@ -197,8 +210,8 @@
 
 [data-ui-style="cde"] .format-btn:active,
 [data-ui-style="cde"] .format-btn[data-on="true"] {
-  background: var(--btn-bg-active);
-  color: var(--btn-fg-active);
+  background: #4992a7;
+  color: #ffffff;
   box-shadow: var(--bevel-sunken);
 }
 
@@ -215,8 +228,8 @@
 [data-ui-style="cde"] .format-bar-close {
   height: 24px;
   border: 0;
-  background: var(--btn-bg);
-  color: var(--btn-fg);
+  background: #c6b2a8;
+  color: #211f20;
   box-shadow: var(--bevel);
 }
 
@@ -244,19 +257,36 @@
 }
 
 [data-ui-style="cde"] :is(.dock-close, .sidebar-close) {
-  border-left: 1px solid var(--frame-dark);
-  color: var(--title-fg);
+  width: 20px;
+  height: 18px;
+  margin: 2px;
+  border: 0;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  box-shadow: var(--bevel);
+}
+
+[data-ui-style="cde"] :is(.dock-close, .sidebar-close):active {
+  color: #ffffff;
+  background: #4992a7;
+  box-shadow: var(--bevel-sunken);
 }
 
 /* 两栏与正文之间也是硬边，不用现代灰 hairline。 */
 [data-ui-style="cde"] .sidebar {
   border-right: 2px solid var(--frame-dark);
-  box-shadow: inset -1px 0 0 var(--frame-light);
+  background: var(--bg-raised);
+  box-shadow:
+    inset -1px 0 0 var(--frame-light),
+    inset 1px 0 0 #ffffff;
 }
 
 [data-ui-style="cde"] .plugin-dock {
   border-left: 2px solid var(--frame-dark);
-  box-shadow: inset 1px 0 0 var(--frame-light);
+  background: var(--bg-raised);
+  box-shadow:
+    inset 1px 0 0 var(--frame-light),
+    inset -1px 0 0 #8d8582;
 }
 
 /* 输入区、下拉、搜索框：左上暗、右下亮的真正凹槽。 */
@@ -421,73 +451,73 @@
 
      | 量到的东西 | 值 | 落成 |
      |---|---|---|
-     | 窗口面（那些面板的底色） | `#4992A7` | `--bg` / `--bg-subtle` |
-     | 3D 斜面的**亮**边 | `#ADCED7` | `--bevel-light` |
-     | 3D 斜面的**暗**边（也是外框） | `#244953` | `--bevel-dark` / `--border` |
+     | 控件/侧栏的暖灰窗口面 | `#C6B2A8` | `--bg` / `--btn-bg` |
+     | 菜单带与选中面 | `#4992A7` | 菜单与选中规则 |
+     | 3D 斜面的**亮**边 | `#F4ECE4` | `--bevel-light` |
+     | 3D 斜面的**暗**边（也是外框） | `#5B5452` | `--bevel-dark` / `--border` |
      | 调色板里那个桃子色块 | `#EDA870` | `--accent` |
-     | 列表里被选中的那一行 | `#C6B2A8` | `--btn-bg-active` 那一族 |
-     | 输入框/列表的浅底 | 白 | `--bg-raised` |
+     | 列表里被选中的那一行 | `#4992A7` | `--btn-bg-active` 那一族 |
+     | 输入/终端的蓝灰凹槽 | `#686F82` | `--bg-sunken` |
 
      ⚠️ **两份参考的先后**：用户先给了那份 Firefox 主题（几个 `rgb()`，我照它写了
      第一版），随后补了这张**默认配色**的截图并说「参考我的配色，这是默认配色」——
      所以**以截图为准**，那份 Firefox 主题不用了。两边其实同一路：都是 CDE 那套
      青绿＋桃色。
 
-     ⚠️ 与别的档最大的不同：这里**面是彩色的**（别的档 `--bg` 都是灰/白）。
-     这是有意的——CDE 默认长相就是"一整块青绿"，把面做成灰就不是它了。 */
-  --bg: #4992a7;
+     与旧版全部青绿的做法不同，这次把**菜单带与控件面分开**：
+     菜单、选中项是青绿，侧栏和按钮是暖灰，正文画布是蓝灰。 */
+  /* 控件、侧栏和对话框的"窗口面"是暖灰紫；青绿只留给菜单带。 */
+  --bg: #c6b2a8;
   /* 横条（菜单栏 / 状态栏）比面略深一档：真机截图里两者**同色**，靠一条阴刻的
      凹槽分开；我们这里没有那条槽（布局不是要抄的东西），就用一档深浅代替。 */
-  --bg-subtle: #3f8496;
+  --bg-subtle: #b7a49b;
   /* ⚠️ **弹层与对话框也是青绿**（真机截图 86/87 就是这样）：这一格是
      `--bg-raised` 而不是白——把它留白就成了现代对话框了。 */
-  --bg-raised: #4992a7;
+  --bg-raised: #d8cbc3;
   /* 文本画布那种**蓝灰**（截图 84 的编辑区，量到 `#686F82`）：给"凹下去"的面用
      （打印预览的底、下沉区域）。⚠️ 不拿它当文档纸面——那是白纸的事。 */
   --bg-sunken: #686f82;
-  /* ⚠️⚠️ **字是白的，不是黑的**（2026-10-17 把真机截图放大 6 倍才看清）：
-     菜单栏、按钮、对话框里的标签**全是白字**压在青绿面上——之前按"青绿上写黑"
-     想当然，整档气质都不对。
+  /* 暖灰控件面用深色文字；青绿菜单带和选中面单独写白字。
      ⚠️ 如实记一条：白字对 `#4992A7` 只有约 **3.0:1**，达不到本仓别处的 AA 门槛——
-     但这就是真机的样子（而且它用的是**点阵字**，笔画粗、实际更好认）。
+     但这就是真机菜单带的样子（而且它用的是**点阵字**，笔画粗、实际更好认）。
      "像 CDE"与"过 AA"在这一档上冲突，选了像。 */
-  --fg: #ffffff;
-  --fg-muted: #e8f2f5;
-  --fg-faint: #cfe3e8;
+  --fg: #211f20;
+  --fg-muted: #4c4646;
+  --fg-faint: #6b6363;
   /* 内部细线用暗青绿（真机里那些分组框的沟）；**外框是棕色**——截图 84 左缘
      量到 `#7D593B`，那是整块面板的边，不是普通分隔线。 */
-  --border: #2c5f6d;
-  --border-strong: #7d593b;
+  --border: #746b68;
+  --border-strong: #514b49;
   /* 真机窗口的外框是两层：内侧浅奶油、外侧棕。它只服务 CDE 的组件规则
      （标题条、侧栏、弹层的双色边），不参与通用的 `--border`，否则文件树、
      输入框那些普通分隔线会一起变成棕色。 */
-  --frame-light: #f7d9c0;
-  --frame-dark: #7d593b;
+  --frame-light: #f4ece4;
+  --frame-dark: #5b5452;
   --title-fg: #ffffff;
-  --btn-fg: #ffffff;
+  --btn-fg: #211f20;
   /* 被选中/压下的按键是暖灰面，字转深青；这是真机列表选中行与按下键的配色。 */
-  --btn-fg-active: #173c45;
+  --btn-fg-active: #ffffff;
   --accent: #eda870;
   /* ⚠️ 桃色上写**黑字**（对比度 11:1）：CDE 的选中条就是黑字。 */
   --accent-fg: #000000;
-  --btn-bg: #4992a7;
-  --btn-bg-hover: #55a0b6;
-  --btn-bg-active: #c6b2a8;
+  --btn-bg: #c6b2a8;
+  --btn-bg-hover: #d8cbc3;
+  --btn-bg-active: #4992a7;
   /* ⚠️ **没有外圈线**（真机按钮只有两条 1px 斜面，面直接贴着背景）：
      写 transparent 而不是删掉 border，盒子高度不变。 */
-  --btn-border: transparent;
-  --switch-off: #2f6674;
+  --btn-border: #746b68;
+  --switch-off: #7b6f6b;
   --switch-on: #eda870;
-  --switch-knob-bg: #adced7;
+  --switch-knob-bg: #f1e9e2;
   /* 斜面那两档（`--bevel` / `--bevel-sunken` 在 `shape.css` 里引）。 */
-  --bevel-light: #adced7;
-  --bevel-dark: #244953;
+  --bevel-light: #f4ece4;
+  --bevel-dark: #5b5452;
   /* ⚠️ CDE 的菜单/弹层在青绿底上，悬停是**提亮**而不是加深（截图 85 里那一行
      比周围亮）。基础那两条半透明黑在青绿上几乎看不出来。 */
-  --bg-hover: rgb(255 255 255 / 16%);
-  --bg-active: rgb(0 0 0 / 18%);
+  --bg-hover: rgb(255 255 255 / 28%);
+  --bg-active: rgb(0 0 0 / 14%);
   /* ⚠️ 硬阴影：那个年代没有"柔和投影"，一像素、不模糊，颜色是外框那支棕。 */
-  --shadow: 1px 1px 0 #7d593b;
+  --shadow: 1px 1px 0 #3f3a39;
 }
 
 [data-ui-style="cde"][data-ui-mode="dark"] {
@@ -543,7 +573,8 @@
 }
 
 [data-ui-style="cde"] .menu-title-open {
-  background: var(--bg-subtle);
+  background: #2c5f6d;
+  color: #ffffff;
   box-shadow: var(--bevel-sunken);
 }
 
@@ -568,23 +599,23 @@
   width: 15px;
   height: 15px;
   /* ⚠️ 槽是**暖灰**（真机截图里量到 `#C6B2A8`），不是浅青——那一格属于窗框那一族。 */
-  background: var(--btn-bg-active);
+  background: #c6b2a8;
 }
 
 [data-ui-style="cde"] ::-webkit-scrollbar-track {
-  background: var(--btn-bg-active);
+  background: #c6b2a8;
   /* 凹槽：左上暗、右下亮（和按钮相反）。 */
   box-shadow: inset 1px 1px 0 var(--bevel-dark), inset -1px -1px 0 var(--bg-raised);
 }
 
 [data-ui-style="cde"] ::-webkit-scrollbar-thumb {
-  background: var(--btn-bg);
-  border: 1px solid var(--border);
+  background: #eda870;
+  border: 1px solid #5b5452;
   box-shadow: var(--bevel);
 }
 
 [data-ui-style="cde"] ::-webkit-scrollbar-thumb:hover {
-  background: var(--btn-bg-hover);
+  background: #f0b684;
 }
 
 [data-ui-style="cde"] ::-webkit-scrollbar-corner {
@@ -594,8 +625,8 @@
 [data-ui-style="cde"] ::-webkit-scrollbar-button:vertical:decrement {
   display: block;
   height: 15px;
-  background: var(--btn-bg);
-  border: 1px solid var(--border);
+  background: #c6b2a8;
+  border: 1px solid #5b5452;
   box-shadow: var(--bevel);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13'%3E%3Cpath d='M3 9 L6.5 3.5 L10 9 Z' fill='%237d593b'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -605,8 +636,8 @@
 [data-ui-style="cde"] ::-webkit-scrollbar-button:vertical:increment {
   display: block;
   height: 15px;
-  background: var(--btn-bg);
-  border: 1px solid var(--border);
+  background: #c6b2a8;
+  border: 1px solid #5b5452;
   box-shadow: var(--bevel);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13'%3E%3Cpath d='M3 4 L6.5 9.5 L10 4 Z' fill='%237d593b'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
