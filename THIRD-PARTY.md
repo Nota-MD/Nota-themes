@@ -416,7 +416,8 @@ CDE 文档主题迁移源使用的
 `Nota WenQuanYi Bitmap Song` 从 **WenQuanYi Bitmap Song 1.0 RC1**
 的完整 16px PCF 生成，原字形与参考项目是
 **AmusementClub/Wenquanyi-Bitmap-Song-TTF**。生成后的 TTF 同时保留
-ASCII/CJK 16×16 字模，并嵌入 EBDT/EBLC 1-bit strike。
+ASCII/CJK 16×16 字模，并嵌入 EBDT/EBLC 1-bit strike。主题运行时使用由该
+TTF **无损转成**的 WOFF2 容器；两种容器的字形、cmap 与位图表相同。
 
 | 项 | 说明 |
 |---|---|
@@ -425,8 +426,9 @@ ASCII/CJK 16×16 字模，并嵌入 EBDT/EBLC 1-bit strike。
 | 版权 | Copyright (C) 2004–2010, WenQuanYi Project Board of Trustees and Qianqian Fang |
 | 许可 | **GPL-2.0 with font embedding exception** |
 | 修改 | 从完整 16px PCF 生成 TTF；保留全部 ASCII/CJK 位图并嵌入 EBDT/EBLC |
-| SHA-256 | `9ef195f67950c47b98d09015e4e4cf8692f82ab3180df04a8697c072d330f0ea` |
-| 字体位置 | `src/styles/external-themes/cde/assets/fonts/Nota-WenQuanYi-Bitmap-Song-EBDT-16px.ttf`（也是首选可编辑形式） |
+| 源文件 SHA-256 | `9ef195f67950c47b98d09015e4e4cf8692f82ab3180df04a8697c072d330f0ea`（TTF） |
+| WOFF2 SHA-256 | `beb8fbad0af63498b0c424c7bdcb8e69041b166fe5b1a161b77204287676187b` |
+| 字体位置 | `src/styles/external-themes/cde/assets/fonts/Nota-WenQuanYi-Bitmap-Song-EBDT-16px.{ttf,woff2}`；CSS 加载 WOFF2，TTF 是可编辑源文件 |
 | 完整许可 | 与字体同目录：[`WQY-Bitmap-Song-COPYRIGHT.txt`](src/styles/external-themes/cde/assets/fonts/WQY-Bitmap-Song-COPYRIGHT.txt)＋[`GPL-2.0.txt`](src/styles/external-themes/cde/assets/fonts/GPL-2.0.txt) |
 | 字体说明 | 与字体同目录：[`Nota-WenQuanYi-Bitmap-Song-NOTICE.txt`](src/styles/external-themes/cde/assets/fonts/Nota-WenQuanYi-Bitmap-Song-NOTICE.txt) |
 | 打包位置 | 位于外置主题的 `assets/fonts/`；由该主题自己的 `@font-face` 加载。Nota 的 `tauri.conf.json` 不再复制字体或许可证 |
@@ -434,3 +436,25 @@ ASCII/CJK 16×16 字模，并嵌入 EBDT/EBLC 1-bit strike。
 ⚠️ **根 `LICENSE` 仍然只有 BSD-2-Clause**。字体是独立数据组件，按它自己的
 GPL-2.0＋字体嵌入例外分发，不改变 Nota 源码许可证；两份许可正文不得合并。
 ⚠️ 外置主题包必须随字体保留同目录的版权、修改说明与 GPL 全文。
+
+## 10. 官方主题随附的字体（**各自留在主题包内**）
+
+| 主题 | 字体 | 许可与位置 |
+|---|---|---|
+| Yaru | Ubuntu、Ubuntu Mono | Ubuntu Font Licence 1.0；`ui/yaru/assets/fonts/UBUNTU-FONT-LICENCE-1.0.txt` |
+| Adwaita | Adwaita Sans、Adwaita Mono | SIL Open Font License 1.1；`ui/adwaita/assets/fonts/LICENSE.txt` |
+| LaTeX / LaTeX Dark | New Computer Modern Serif、Sans、Mono | GUST Font License；各自 `assets/fonts/NEW-CM-GUST-FONT-LICENSE.md` |
+| Vellum | Special Elite | Apache-2.0；`document/vellum/assets/fonts/SPECIAL-ELITE-APACHE-2.0.txt` |
+| Vellum | Huiwen Mincho GBK / 汇文明朝体GBK | Copyright 2022 TerryWang；作者声明个人及企业可免费商用，无标准 SPDX 协议文本；`document/vellum/assets/fonts/HUIWEN-MINCHO-NOTICE.txt` |
+
+LaTeX 字体来自 LaTeXTypora 所带的同一组 New Computer Modern 文件。上游主题
+本身以 Apache-2.0 发布，但其字体使用 GUST Font License；两份许可都保留在
+主题包内，不把 Apache-2.0 错写成字体许可。
+
+这些字体与鸣谢只随相应主题包分发，**不进入 Nota 安装包，也不同步到软件的
+“关于 → 鸣谢”窗口**。
+
+Vellum 的两份字体都经过无损 WOFF2 容器转换，字形与字符映射未修改。源 TTF
+摘要和上游来源写在各自字体目录的 NOTICE 文件中。汇文明朝体没有随字体提供
+标准协议正文，因此这里保留作者版权标识、免费商用声明与来源链接，不把
+Apache-2.0、OFL 或其他协议错误地套用到该字体上。
