@@ -117,8 +117,10 @@
 
   --font-doc: "Vellum Special Elite", "Vellum Mincho",
     "Huiwen-MinchoGBK", "Noto Serif CJK SC", "Source Han Serif SC", serif;
-  --font-mono: "Courier Prime", "Courier New", "Noto Sans Mono CJK SC",
-    monospace;
+  /* Vellum treats code as typed manuscript rather than modern editor chrome:
+     use the same typewriter-first family for Latin and Ming fallback for CJK. */
+  --font-mono: "Vellum Special Elite", "Vellum Mincho",
+    "Huiwen-MinchoGBK", "Noto Serif CJK SC", "Source Han Serif SC", serif;
   --font-math: "KaTeX_Main", "Latin Modern Math", "Vellum Mincho",
     "Huiwen-MinchoGBK", "Noto Serif CJK SC", serif;
   --doc-font-size: 1.04em;
