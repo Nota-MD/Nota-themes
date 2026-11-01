@@ -458,3 +458,26 @@ Vellum 的两份字体都经过无损 WOFF2 容器转换，字形与字符映射
 摘要和上游来源写在各自字体目录的 NOTICE 文件中。汇文明朝体没有随字体提供
 标准协议正文，因此这里保留作者版权标识、免费商用声明与来源链接，不把
 Apache-2.0、OFL 或其他协议错误地套用到该字体上。
+
+## 11. GitHub 文档主题：github-markdown-css（MIT，**随主题包分发**）
+
+| 项 | 说明 |
+|---|---|
+| 来源 | [`sindresorhus/github-markdown-css`](https://github.com/sindresorhus/github-markdown-css) |
+| 版本 | `5.9.0` |
+| 提交 | `7f38dcb9054bc5d860fac65291f5c98fef47932c` |
+| 上游文件 | `github-markdown-light.css`、`github-markdown-dark.css` |
+| 许可 | MIT，完整正文保存在 `document/github/LICENSE` 与 `document/github-dark/LICENSE` |
+| 本地修改 | `.markdown-body` 根映射为 Nota 文档主题规范的 `#write`；补充 Nota 文档变量与 980px 版心 |
+
+```text
+MIT License
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```

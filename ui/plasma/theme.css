@@ -281,6 +281,10 @@
 
 /* shape.css: plasma */
 [data-ui-style="plasma"] {
+  --dialog-close-size: 28px;
+  --dialog-close-radius: 999px;
+  /* Figma Plasma 6 control text is predominantly 12–14px. */
+  --ui-font-size: 14px;
   --radius-sm: 3px;
   /* Figma Plasma 6 kit: settings rows/search fields settle at 26-32px high
      with 5px rounded selection rows. */
@@ -320,8 +324,10 @@
   --fg-faint: #657171;
   --border: #d3d3d3;
   --border-strong: #bcbcbc;
-  --accent: #1d7fb8;
-  --accent-fg: #ffffff;
+  /* Figma Plasma 6 accent: #3daee9. Use Plasma's dark glyph color on it
+     instead of white, which would only reach 2.5:1. */
+  --accent: #3daee9;
+  --accent-fg: #08202e;
   --btn-bg: #e8e8e8;
   --btn-bg-hover: #dcdcdc;
   --btn-bg-active: #cfcfcf;

@@ -281,8 +281,15 @@
 
 /* shape.css: macos */
 [data-ui-style="macos"] {
+  --dialog-close-size: 24px;
+  --dialog-close-radius: 999px;
+  --dialog-close-bg: transparent;
+  --dialog-close-border: transparent;
   /* Figma macOS 27: text fields and menu-item highlights use 5px; standard
      push buttons use 6px. Larger floating surfaces remain 12px. */
+  /* The kit's body/control size is 13px. 14px keeps Chinese UI text legible
+     while preserving the compact macOS text rhythm. */
+  --ui-font-size: 14px;
   --radius-sm: 5px;
   --radius: 6px;
   --radius-lg: 12px;

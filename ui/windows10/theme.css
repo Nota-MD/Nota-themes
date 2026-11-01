@@ -281,6 +281,12 @@
 
 /* shape.css: windows10 */
 [data-ui-style="windows10"] {
+  --dialog-close-size: 32px;
+  --dialog-close-radius: 0;
+  --dialog-close-bg: transparent;
+  --dialog-close-border: transparent;
+  /* FluentWinUI: Segoe UI body/control text is 14px. */
+  --ui-font-size: 14px;
   --radius-sm: 2px;
   --radius: 2px;
   --radius-lg: 4px;

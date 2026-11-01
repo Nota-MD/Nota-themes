@@ -56,6 +56,8 @@ light/dark setting is accepted, but both values resolve to the same CDE colors.
 | LaTeX Dark | [`document/latex-dark/theme.css`](document/latex-dark/theme.css) |
 | CDE-inspired | [`document/cde/theme.css`](document/cde/theme.css) |
 | Vellum | [`document/vellum/theme.css`](document/vellum/theme.css) |
+| GitHub | [`document/github/theme.css`](document/github/theme.css) |
+| GitHub Dark | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 
 ### Install a document theme
 

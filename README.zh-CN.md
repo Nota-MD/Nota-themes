@@ -56,6 +56,8 @@ CDE 界面主题有意只提供一套经典配色。Nota 的全局明暗设置�
 | LaTeX 深色 | [`document/latex-dark/theme.css`](document/latex-dark/theme.css) |
 | CDE | [`document/cde/theme.css`](document/cde/theme.css) |
 | Vellum | [`document/vellum/theme.css`](document/vellum/theme.css) |
+| GitHub | [`document/github/theme.css`](document/github/theme.css) |
+| GitHub 深色 | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 
 ### 安装文档主题
 

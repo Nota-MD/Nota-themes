@@ -281,6 +281,8 @@
 
 /* shape.css: yaru */
 [data-ui-style="yaru"] {
+  --dialog-close-size: 32px;
+  --dialog-close-radius: 999px;
   --radius-sm: 4px;
   --radius: 4px;
   /* Figma Ubuntu UI: the application window uses an 8px corner. Keep compact

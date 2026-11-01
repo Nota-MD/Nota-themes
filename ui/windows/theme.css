@@ -281,6 +281,12 @@
 
 /* shape.css: windows */
 [data-ui-style="windows"] {
+  --dialog-close-size: 32px;
+  --dialog-close-radius: 4px;
+  --dialog-close-bg: transparent;
+  --dialog-close-border: transparent;
+  /* Windows UI 2.6: Segoe UI body/control text is primarily 14px. */
+  --ui-font-size: 14px;
   --radius-sm: 3px;
   --radius: 4px;
   --radius-lg: 8px;

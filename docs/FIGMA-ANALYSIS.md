@@ -1,6 +1,8 @@
 # Figma UI kit analysis
 
-Reviewed locally on 2026-10-24:
+Rechecked locally on 2026-10-27 with `openfig-core` against the original
+Figma archives. The earlier analysis used the same kits; this pass records the
+current token sample and resulting CSS changes.
 
 - `Adwaita Design Kit (Community).fig`
 - `macOS 27 (Community) (Copy).fig`
@@ -22,10 +24,13 @@ copied into Nota Themes.
 - Window: 12px outer radius.
 - Sidebar item: 42px high, 6px radius.
 - Switch: 48×26px.
-- Core palette: window `#fafafb`, sidebar `#ebebed`, accent `#3584e4`.
+- Core palette: window `#fafafb`, sidebar `#ebebed`, view `#ffffff`, header
+  `#ebebeb`, accent `#3584e4`.
+- Dark palette: window `#222226`, sidebar `#2e2e32`, raised surface `#36363a`.
 
 Applied to `ui/adwaita/theme.css`: 34px controls, 6px control radius, 48px
-toolbar, 12px floating-surface radius, and a 48×26 switch.
+toolbar, 12px floating-surface radius, a 48×26 switch, the measured
+`#ebebed` primary sidebar color, and 14px UI text.
 
 ## macOS
 
@@ -38,16 +43,17 @@ toolbar, 12px floating-surface radius, and a 48×26 switch.
 
 Applied to `ui/macos/theme.css`: 5px small radius and 6px standard control
 radius. The existing 28px control height and 38px toolbar already match the
-kit.
+kit; UI text is set to 14px for Chinese legibility against the kit's 13px body.
 
 ## KDE Plasma 6
 
 - Text: Noto Sans 12-14px for native controls.
 - Settings rows: commonly 26-32px high, 5px radius.
 - Search field: 26-30px high.
-- Accent: `#3daee9`.
+- Accent: `#3daee9`; the contrast-safe foreground is `#08202e`.
 
-Applied to `ui/plasma/theme.css`: 28px controls and 5px standard radius.
+Applied to `ui/plasma/theme.css`: 28px controls, 5px standard radius, the
+measured accent, and 14px UI text.
 
 ## Ubuntu / Yaru
 
@@ -64,11 +70,13 @@ retaining 4px compact controls.
 - Controls: 32px high, predominantly 4px radius.
 - Light accent: `#0067c0`.
 - Dark accent family: `#4cc2ff` / `#60cdff`.
+- Light surfaces: content `#f9f9f9`, chrome `#f6f6f6`, solid `#f3f3f3`.
+- Dark surfaces: content `#282828`, chrome `#202020`, solid `#202020`.
 - Stroke and state layers remain low-contrast neutral tones.
 
 Applied to `ui/windows/theme.css`: 32px controls and 4px radius were already
 present; the accent tokens were corrected to `#0067c0` (light) and `#4cc2ff`
-(dark).
+(dark), and UI text follows the kit's 14px body size.
 
 ## Windows 10 / FluentWinUI
 
@@ -76,7 +84,8 @@ present; the accent tokens were corrected to `#0067c0` (light) and `#4cc2ff`
 - Accent: `#0078d7`.
 - Controls: 32px high with 2px radius.
 
-The existing `ui/windows10/theme.css` already matches those measurements.
+The existing `ui/windows10/theme.css` already matches the accent and control
+height; UI text now follows the kit's 14px body size.
 
 ## Licensing boundary
 

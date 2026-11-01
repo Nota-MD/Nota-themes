@@ -281,8 +281,13 @@
 
 /* shape.css: adwaita */
 [data-ui-style="adwaita"] {
+  --dialog-close-size: 32px;
+  --dialog-close-radius: 999px;
   /* Figma Adwaita Design Kit: header buttons are 34px, standard controls use
      6px corners, and the header bar is 48px. */
+  /* The kit's native control text is primarily 12–15px. Nota uses 14px to
+     retain comfortable Chinese glyph rendering while matching that density. */
+  --ui-font-size: 14px;
   --radius-sm: 5px;
   --radius: 6px;
   /* 稿子：浮动窗口圆角 15px。落在这里（`--radius-lg`）是因为本仓拿它画的是
@@ -290,7 +295,7 @@
   --radius-lg: 12px;
   --control-height: 34px;
   --spacing: 10px;
-  /* ⚠️ 顶栏高度 38 → 44（稿子：headerbar 44px）。
+  /* ⚠️ 顶栏高度 38 → 48（稿子：headerbar 48px）。
      **这是那几份稿子里唯一一档照用了"标题栏高度"的**，理由：稿子给的
      44px 比我们现在的 38px **大**，控件 36px 放进去上下各留 4px、正合适；
      而 Breeze(32) / Win11(32) / Win10(30) 那三份给的都比 38 小，
@@ -316,7 +321,8 @@
      `decorations: true`），而 `--bg-subtle` 铺的是我们的**工具栏/侧栏**——
      那是内容行，要比面板深一档才分得开；用 #ffffff 会比面板还亮、层级反了。 */
   --bg: #fafafb;
-  --bg-subtle: #f3f3f5;
+  /* Figma Sidebar / Header Bar: the primary sidebar is #ebebed. */
+  --bg-subtle: #ebebed;
   --bg-raised: #ffffff;
   --fg: #1e1e1e;
   /* 稿子：次要辅助文字 rgba(0,0,6,0.55)。它在 #f3f3f5 上只有 4.26:1，

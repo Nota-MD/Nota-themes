@@ -1,24 +1,24 @@
 {
   "schema": 1,
   "repository": "Nota-themes",
-  "release": "v0.6.0-beta",
-  "generated_at": "2026-10-18T09:10:00Z",
+  "release": "v0.7.0-beta",
+  "generated_at": "2026-11-01T05:15:21Z",
   "packages": [
     {
       "id": "nota-ui-themes",
       "type": "interface",
-      "version": "0.6.0",
-      "file": "nota-ui-themes-0.6.0.zip",
-      "sha256": "01cd917fb8a00be4f98d9d6a77c081f161c9fe07ff332c791beceb6a8a685580",
-      "url": "https://github.com/Nota-MD/Nota-themes/releases/download/v0.6.0-beta/nota-ui-themes-0.6.0.zip"
+      "version": "0.7.0",
+      "file": "nota-ui-themes-0.7.0.zip",
+      "sha256": "f253a1b9cb64a109f309febdec28a106cb9ab466865670f2c0f2dde4bcab77bc",
+      "url": "https://github.com/Nota-MD/Nota-themes/releases/download/v0.7.0-beta/nota-ui-themes-0.7.0.zip"
     },
     {
       "id": "nota-document-themes",
       "type": "document",
-      "version": "0.6.0",
-      "file": "nota-document-themes-0.6.0.zip",
-      "sha256": "489f2b71f729a81fb8e18ad1bb657ce68624953b44a7aac82ea5c4b0b16cb978",
-      "url": "https://github.com/Nota-MD/Nota-themes/releases/download/v0.6.0-beta/nota-document-themes-0.6.0.zip"
+      "version": "0.7.0",
+      "file": "nota-document-themes-0.7.0.zip",
+      "sha256": "c2f1e4dd9ee181e2c71d30bc2c5a4f65c676d359627ca8226e659caa39151304",
+      "url": "https://github.com/Nota-MD/Nota-themes/releases/download/v0.7.0-beta/nota-document-themes-0.7.0.zip"
     }
   ],
   "interface_themes": [
@@ -33,8 +33,14 @@
   ],
   "document_themes": [
     "adwaita",
+    "adwaita-dark",
     "minimal",
+    "minimal-dark",
     "latex",
-    "cde"
+    "latex-dark",
+    "cde",
+    "vellum",
+    "github",
+    "github-dark"
   ]
 }
