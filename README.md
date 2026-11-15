@@ -35,6 +35,13 @@ Nota keeps two visual axes independent:
 The CDE interface theme is intentionally a single classic palette. Nota's global
 light/dark setting is accepted, but both values resolve to the same CDE colors.
 
+Adwaita, Yaru, Breeze, GitHub, Windows 11, Windows 10, and macOS include interface
+icons from their corresponding upstream design systems where an exact semantic
+match exists. Icons remain package-local under each theme's
+`assets/icons-theme/` directory and retain the upstream license.
+
+![Theme-native Adwaita icons in Nota settings](docs/images/theme-icons-adwaita.png)
+
 ### Install an interface theme
 
 1. Open **Settings → Appearance → Styles folder…** in Nota.

@@ -481,3 +481,32 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
+
+## 12. Theme-native interface icons
+
+Five interface themes now carry icon shapes from the corresponding upstream
+design system. Icon files are package-local under each theme's
+`assets/icons-theme/` directory. They affect only that theme package and do not
+change the BSD-2-Clause license of the rest of the repository.
+
+| Theme | Upstream | Commit | License |
+|---|---|---|---|
+| Adwaita | [GNOME Adwaita Icon Theme](https://github.com/GNOME/adwaita-icon-theme) | `2066120e58cf17939ac337dccfc1b67047dd19e3` | LGPL-3.0 or CC-BY-SA-3.0 |
+| Yaru | [Ubuntu Yaru](https://github.com/ubuntu/yaru) | `7f18973e05607c609c4b972f0dd9bff36fa2a13e` | GPL-3.0 or CC-BY-SA-4.0 |
+| Breeze / Plasma | [KDE Breeze Icons](https://github.com/KDE/breeze-icons) | `3183b090219bf48b116fa3e4c82380d34b860218` | LGPL-3.0-or-later |
+| GitHub | [Primer Octicons](https://github.com/primer/octicons) | Iconify live collection | MIT |
+| Windows 11 / 10 | [Microsoft Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) | Iconify live collection | MIT |
+| macOS | [MacTahoe Icon Theme](https://github.com/vinceliuice/MacTahoe-icon-theme) | `2026-09-10` archive `86510751e1d7fdf8a94fcad52dce66d6c3237410cd8619a9026c0fa162276ce8` | GPL-3.0 |
+
+The complete upstream license texts are kept beside the icons:
+
+- `ui/adwaita/assets/icons-theme/LICENSE-*`
+- `ui/yaru/assets/icons-theme/LICENSE-*`
+- `ui/plasma/assets/icons-theme/LICENSE-*`
+- `ui/ghub/assets/icons-theme/LICENSE-MIT.txt`
+- `ui/windows/assets/icons-theme/LICENSE-MIT.txt`
+- `ui/windows10/assets/icons-theme/LICENSE-MIT.txt`
+- `ui/macos/assets/icons-theme/LICENSE-GPL-3.0.txt` and `AUTHORS.txt`
+
+`bash tools/check-icons.sh` verifies that every CSS icon reference is present
+and that each package-local checksum and license file is intact.

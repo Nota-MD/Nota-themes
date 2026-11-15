@@ -35,6 +35,12 @@ Nota 把外观分成两套独立主题：
 CDE 界面主题有意只提供一套经典配色。Nota 的全局明暗设置仍可传入，但浅色和
 深色会命中完全相同的一组 CDE 颜色。
 
+Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在准确语义对应时，
+会使用各自上游设计体系的界面图标。图标保存在各主题的
+`assets/icons-theme/` 目录中，并保留对应的上游许可证。
+
+![Nota 设置页中的 Adwaita 原生图标](docs/images/theme-icons-adwaita.png)
+
 ### 安装界面主题
 
 1. 打开 Nota 的 **设置 → 外观 → 风格文件夹…**
