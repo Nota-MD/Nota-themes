@@ -510,3 +510,21 @@ The complete upstream license texts are kept beside the icons:
 
 `bash tools/check-icons.sh` verifies that every CSS icon reference is present
 and that each package-local checksum and license file is intact.
+
+---
+
+## 13. IBM Documentation 主题字体：IBM Plex Sans SC 与 IBM Plex Mono
+
+`document/ibm-documentation/` 随主题包分发 IBM Plex 字体的 WOFF2 文件，用于离线中文正文和代码排版。
+
+| 项 | 说明 |
+|---|---|
+| 上游 | [IBM/plex](https://github.com/IBM/plex) |
+| 字体许可 | SIL Open Font License 1.1 |
+| 字体包 | `@ibm/plex-sans-sc@1.1.0`、`@ibm/plex-mono@2.5.0` |
+| 字体文件 | `document/ibm-documentation/assets/fonts/` |
+| 完整许可证 | 同目录下的 `IBM-PLEX-SANS-SC-OFL-1.1.txt` 与 `IBM-PLEX-MONO-OFL-1.1.txt` |
+| 校验 | 同目录下的 `SHA256SUMS` |
+
+主题只分发 IBM Plex Sans SC 的 Regular、SemiBold、Bold，以及 IBM Plex Mono Regular。
+字体文件未修改；主题 CSS 仅通过 `@font-face` 从主题目录加载它们。字体包版本、来源和文件清单另见该目录的 `NOTICE.md`。
