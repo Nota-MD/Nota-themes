@@ -66,6 +66,7 @@ match exists. Icons remain package-local under each theme's
 | GitHub | [`document/github/theme.css`](document/github/theme.css) |
 | GitHub Dark | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 | IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
+| IBM Documentation Dark | [`document/ibm-documentation-dark/theme.css`](document/ibm-documentation-dark/theme.css) |
 
 ### Install a document theme
 

@@ -65,6 +65,7 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
 | GitHub | [`document/github/theme.css`](document/github/theme.css) |
 | GitHub 深色 | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 | IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
+| IBM Documentation 深色 | [`document/ibm-documentation-dark/theme.css`](document/ibm-documentation-dark/theme.css) |
 
 ### 安装文档主题
 
