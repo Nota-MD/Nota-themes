@@ -68,7 +68,7 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
 
 ### 安装文档主题
 
-1. 打开 **设置 → 文档主题 → 打开…**
+1. 打开 Nota 的 **设置 → 文档主题 → 打开…**
 2. 将自包含主题目录（`<id>/theme.css` 与资源）放入主题目录
 3. 从“主题”菜单选择
 

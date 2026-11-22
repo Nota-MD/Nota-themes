@@ -112,7 +112,8 @@ retain their own licenses; see [`THIRD-PARTY.md`](THIRD-PARTY.md).
   License) and retain the upstream LaTeX theme's Apache-2.0 notice.
 - Vellum bundles Special Elite (Apache-2.0) and Huiwen Mincho GBK (author
   statement permitting personal and commercial use).
-- IBM Documentation bundles IBM Plex Sans SC and IBM Plex Mono under the SIL Open Font License 1.1.
+- IBM Documentation bundles IBM Plex Sans SC and IBM Plex Mono (SIL Open Font
+  License 1.1).
 
 Each theme keeps its font licences in its own `assets/fonts/` directory. These
 acknowledgements are intentionally package-local and are not copied into the
