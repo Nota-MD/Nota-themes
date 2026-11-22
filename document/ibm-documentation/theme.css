@@ -49,14 +49,15 @@
   --fg-faint: #6f6f6f;
   --border: #d0d0d0;
   --border-strong: #8d8d8d;
-  --bg-subtle: #262626;
-  --bg-raised: #e0e0e0;
+  --bg-subtle: #f4f4f4;
+  --bg-raised: #ffffff;
   --bg-hover: rgba(15, 98, 254, 0.08);
   --bg-active: rgba(15, 98, 254, 0.14);
   --radius: 0;
   --radius-sm: 0;
   --accent: #0f62fe;
   --accent-fg: #ffffff;
+  --link-hover: #0043ce;
 
   --font-doc: "IBM Plex Sans SC", "Noto Sans CJK SC", "Source Han Sans SC",
     "Microsoft YaHei", Arial, sans-serif;
@@ -73,7 +74,10 @@
   --doc-h5-size: 1em;
   --doc-h6-size: 0.92em;
 
-  --select-text-bg-color: #d0e2ff;
+  --selection-bg: #a6c8ff;
+  --selection-ink: #161616;
+  --selection-outline: #0f62fe;
+  --select-text-bg-color: #a6c8ff;
   --select-text-font-color: #161616;
 
   --code-comment: #6f6f6f;
@@ -115,6 +119,12 @@ h2 {
   font-size: 1.65em;
 }
 
+h1,
+h2 {
+  padding-bottom: 0.32em;
+  border-bottom: 1px solid var(--border);
+}
+
 h3 { font-size: var(--doc-h3-size); }
 h4 { font-size: var(--doc-h4-size); }
 h5 { font-size: var(--doc-h5-size); }
@@ -140,7 +150,7 @@ a {
   text-underline-offset: 0.14em;
 }
 
-a:hover { color: #0043ce; }
+a:hover { color: var(--link-hover); }
 strong { color: inherit; font-weight: 700; }
 em { font-style: italic; }
 del { color: var(--fg-muted); }
@@ -148,9 +158,9 @@ del { color: var(--fg-muted); }
 /* Inline code and block code */
 code {
   padding: 0.12em 0.34em;
-  border: 0;
+  border-bottom: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  background: transparent;
+  background: var(--bg-subtle);
   color: #161616;
   font-family: var(--font-mono);
   font-size: 0.9em;
@@ -220,7 +230,7 @@ th {
   font-weight: 700;
 }
 
-tbody tr:nth-child(even) { background: #f8f8f8; }
+tbody tr:nth-child(even) { background: #f4f4f4; }
 
 img,
 video {
@@ -234,21 +244,25 @@ input[type="checkbox"] { accent-color: var(--accent); }
    usable when Nota or the host exposes a dark color preference. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --doc-bg: #262626;
+    --doc-bg: #161616;
     --doc-fg: #f4f4f4;
     --fg: #f4f4f4;
     --fg-muted: #c6c6c6;
     --fg-faint: #a8a8a8;
     --border: #525252;
     --border-strong: #8d8d8d;
-    --bg-subtle: #1f1f1f;
+    --bg-subtle: #262626;
     --bg-raised: #393939;
     --bg-hover: rgba(120, 169, 255, 0.14);
     --bg-active: rgba(120, 169, 255, 0.22);
     --accent: #78a9ff;
     --accent-fg: #161616;
-    --select-text-bg-color: #525252;
-    --select-text-font-color: #f4f4f4;
+    --link-hover: #a6c8ff;
+    --selection-bg: #78a9ff;
+    --selection-ink: #161616;
+    --selection-outline: #78a9ff;
+    --select-text-bg-color: #78a9ff;
+    --select-text-font-color: #161616;
     --code-comment: #a8a8a8;
     --code-keyword: #be95ff;
     --code-string: #42be65;
@@ -265,9 +279,13 @@ input[type="checkbox"] { accent-color: var(--accent); }
   h5,
   h6 { color: var(--doc-fg); }
 
-  code { background: transparent; color: var(--doc-fg); }
+  code {
+    background: var(--bg-subtle);
+    color: var(--doc-fg);
+    border-bottom-color: var(--border-strong);
+  }
   pre { border-color: transparent; background: var(--bg-subtle); color: #f4f4f4; }
   blockquote { border-color: #78a9ff; background: #393939; color: var(--doc-fg); }
   th { background: var(--bg-raised); color: var(--doc-fg); }
-  tbody tr:nth-child(even) { background: #202020; }
+  tbody tr:nth-child(even) { background: #262626; }
 }
