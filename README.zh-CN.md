@@ -30,16 +30,23 @@ Nota 把外观分成两套独立主题：
 | Windows 11 | [`ui/windows`](ui/windows/) | `windows` |
 | Windows 10 | [`ui/windows10`](ui/windows10/) | `windows10` |
 | Yaru | [`ui/yaru`](ui/yaru/) | `yaru` |
+| Carbon-inspired | [`ui/carbon`](ui/carbon/) | `carbon` |
 | CDE-inspired | [`ui/cde`](ui/cde/) | `cde` |
 
 CDE 界面主题有意只提供一套经典配色。Nota 的全局明暗设置仍可传入，但浅色和
 深色会命中完全相同的一组 CDE 颜色。
 
-Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在准确语义对应时，
+Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10、macOS 和 Carbon 在存在准确语义对应时，
 会使用各自上游设计体系的界面图标。图标保存在各主题的
 `assets/icons-theme/` 目录中，并保留对应的上游许可证。
 
-![Nota 设置页中的 Adwaita 原生图标](docs/images/theme-icons-adwaita.png)
+展示截图与官网预览会把界面主题和合适的文档主题配对：Adwaita/Yaru 使用
+Adwaita，GitHub 使用 GitHub，Carbon 使用 IBM Documentation，CDE 使用 CDE，
+其余界面主题使用极简文档主题。主程序仍保持两条主题轴独立。
+
+![浅色界面主题合集](docs/images/interface-themes-light.png)
+
+![深色界面主题合集](docs/images/interface-themes-dark.png)
 
 ### 安装界面主题
 
@@ -47,8 +54,6 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
 2. 将自包含主题目录（`<id>/theme.css` 与相关资源）复制进去
 3. 目录名就是主题 id
 4. 在“界面风格”中选择主题
-
-![Yaru 设置界面](docs/images/yaru-settings.png)
 
 ## 文档主题
 
@@ -66,6 +71,8 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
 | GitHub 深色 | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 | IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
 
+![文档主题合集](docs/images/document-themes.png)
+
 ### 安装文档主题
 
 1. 打开 Nota 的 **设置 → 文档主题 → 打开…**
@@ -75,12 +82,6 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
 包结构规则见 [`docs/PACKAGE-SPEC.md`](docs/PACKAGE-SPEC.md)。
 当前系统主题所依据的 Figma 测量与授权边界见
 [`docs/FIGMA-ANALYSIS.md`](docs/FIGMA-ANALYSIS.md)。
-
-![CDE 风格主题](docs/images/cde.png)
-
-![Vellum 文档主题](docs/images/vellum.png)
-
-![浅色与深色界面主题](docs/images/interface-themes-dark.png)
 
 ## 下载与更新
 

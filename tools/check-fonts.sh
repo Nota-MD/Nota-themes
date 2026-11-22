@@ -18,6 +18,10 @@ for f in \
   ui/adwaita/assets/fonts/AdwaitaSans-Regular.ttf \
   ui/adwaita/assets/fonts/AdwaitaMono-Regular.ttf \
   ui/adwaita/assets/fonts/LICENSE.txt \
+  ui/carbon/assets/fonts/IBMPlexSansSC-Regular.woff2 \
+  ui/carbon/assets/fonts/IBMPlexMono-Regular.woff2 \
+  ui/carbon/assets/fonts/IBM-PLEX-SANS-SC-OFL-1.1.txt \
+  ui/carbon/assets/fonts/IBM-PLEX-MONO-OFL-1.1.txt \
   document/latex/assets/fonts/NewCM10-Book.otf \
   document/latex/assets/fonts/NewCMMono10-Book.otf \
   document/latex/assets/fonts/NEW-CM-GUST-FONT-LICENSE.md \
@@ -35,6 +39,7 @@ done
 
 grep -q '@font-face' ui/yaru/theme.css || { echo "FAIL Yaru has no @font-face" >&2; fail=1; }
 grep -q '@font-face' ui/adwaita/theme.css || { echo "FAIL Adwaita has no @font-face" >&2; fail=1; }
+grep -q '@font-face' ui/carbon/theme.css || { echo "FAIL Carbon has no @font-face" >&2; fail=1; }
 grep -q '@font-face' document/latex/theme.css || { echo "FAIL LaTeX has no @font-face" >&2; fail=1; }
 grep -q '@font-face' document/latex-dark/theme.css || { echo "FAIL LaTeX Dark has no @font-face" >&2; fail=1; }
 grep -q '@font-face' document/vellum/theme.css || { echo "FAIL Vellum has no @font-face" >&2; fail=1; }

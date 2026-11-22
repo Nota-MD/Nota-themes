@@ -87,10 +87,31 @@ present; the accent tokens were corrected to `#0067c0` (light) and `#4cc2ff`
 The existing `ui/windows10/theme.css` already matches the accent and control
 height; UI text now follows the kit's 14px body size.
 
+## IBM Carbon
+
+Carbon's productive UI guidance and public packages were checked instead of a
+redistributable Figma archive:
+
+- Body text and controls use IBM Plex Sans at a 14px default.
+- Productive controls are 32px high; regular controls are 40px high. Nota uses
+  the compact 32px tier for its dense editor chrome.
+- Buttons, fields, menus, and overlays use square or 0-2px corners.
+- The light theme uses White/G10 surfaces: `#ffffff`, `#f4f4f4`, `#e0e0e0`,
+  text `#161616`, secondary text `#525252`, and blue `#0f62fe`.
+- The dark theme uses the G100 surface ladder: `#161616`, `#262626`, `#393939`,
+  text `#f4f4f4`, secondary text `#c6c6c6`, and blue `#78a9ff`.
+- Focus is shown with a visible blue perimeter; selection uses a 2px left or top
+  blue edge instead of rounded pill-shaped active states.
+
+Applied to `ui/carbon/theme.css`: 32px controls, 40px toolbar, 28px status bar,
+zero-radius controls, 48x24px toggles, IBM Plex Sans SC/Mono, Carbon state
+colors, and Carbon Icons under `assets/icons-theme/`.
+
 ## Licensing boundary
 
 The Apple kit states that Apple Design Resources may not be embedded in
 software or redistributed. The macOS theme therefore uses only independently
 written CSS and measured dimensions; no Apple resource is bundled. Windows,
 GNOME, KDE, and Ubuntu kit assets are likewise not copied. The themes use open
-font files only where their own licences permit redistribution.
+font files only where their own licences permit redistribution. Carbon colors
+and icons are Apache-2.0; IBM Plex is OFL-1.1.

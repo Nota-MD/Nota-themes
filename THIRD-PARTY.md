@@ -443,6 +443,7 @@ GPL-2.0＋字体嵌入例外分发，不改变 Nota 源码许可证；两份许�
 |---|---|---|
 | Yaru | Ubuntu、Ubuntu Mono | Ubuntu Font Licence 1.0；`ui/yaru/assets/fonts/UBUNTU-FONT-LICENCE-1.0.txt` |
 | Adwaita | Adwaita Sans、Adwaita Mono | SIL Open Font License 1.1；`ui/adwaita/assets/fonts/LICENSE.txt` |
+| Carbon interface | IBM Plex Sans SC、IBM Plex Mono | SIL Open Font License 1.1；`ui/carbon/assets/fonts/` |
 | LaTeX / LaTeX Dark | New Computer Modern Serif、Sans、Mono | GUST Font License；各自 `assets/fonts/NEW-CM-GUST-FONT-LICENSE.md` |
 | Vellum | Special Elite | Apache-2.0；`document/vellum/assets/fonts/SPECIAL-ELITE-APACHE-2.0.txt` |
 | Vellum | Huiwen Mincho GBK / 汇文明朝体GBK | Copyright 2022 TerryWang；作者声明个人及企业可免费商用，无标准 SPDX 协议文本；`document/vellum/assets/fonts/HUIWEN-MINCHO-NOTICE.txt` |
@@ -485,7 +486,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## 12. Theme-native interface icons
 
-Five interface themes now carry icon shapes from the corresponding upstream
+Eight interface themes now carry icon shapes from the corresponding upstream
 design system. Icon files are package-local under each theme's
 `assets/icons-theme/` directory. They affect only that theme package and do not
 change the BSD-2-Clause license of the rest of the repository.
@@ -498,6 +499,7 @@ change the BSD-2-Clause license of the rest of the repository.
 | GitHub | [Primer Octicons](https://github.com/primer/octicons) | Iconify live collection | MIT |
 | Windows 11 / 10 | [Microsoft Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) | Iconify live collection | MIT |
 | macOS | [MacTahoe Icon Theme](https://github.com/vinceliuice/MacTahoe-icon-theme) | `2026-09-10` archive `86510751e1d7fdf8a94fcad52dce66d6c3237410cd8619a9026c0fa162276ce8` | GPL-3.0 |
+| Carbon | [Carbon Icons](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) | `@carbon/icons@11.92.0` | Apache-2.0 |
 
 The complete upstream license texts are kept beside the icons:
 
@@ -508,6 +510,7 @@ The complete upstream license texts are kept beside the icons:
 - `ui/windows/assets/icons-theme/LICENSE-MIT.txt`
 - `ui/windows10/assets/icons-theme/LICENSE-MIT.txt`
 - `ui/macos/assets/icons-theme/LICENSE-GPL-3.0.txt` and `AUTHORS.txt`
+- `ui/carbon/assets/icons-theme/LICENSE-APACHE-2.0.txt`
 
 `bash tools/check-icons.sh` verifies that every CSS icon reference is present
 and that each package-local checksum and license file is intact.
@@ -529,3 +532,19 @@ and that each package-local checksum and license file is intact.
 
 主题只分发 IBM Plex Sans SC 的 Regular、SemiBold、Bold，以及 IBM Plex Mono Regular。
 字体文件未修改；主题 CSS 仅通过 `@font-face` 从主题目录加载它们。字体包版本、来源和文件清单另见该目录的 `NOTICE.md`。
+
+## 14. Carbon-inspired 界面主题
+
+`ui/carbon/` 使用 IBM Carbon 的公开设计令牌与 Carbon Icons，并复用同一组
+IBM Plex 字体文件构建独立界面主题。主题名称使用 `Carbon-inspired`，不表示
+IBM 对 Nota 的赞助、认证或官方关联。
+
+| 项目 | 来源 | 版本 | 许可 |
+|---|---|---|---|
+| Carbon color and layout tokens | [Carbon Design System](https://github.com/carbon-design-system/carbon) | `@carbon/colors@11.62.0` | Apache-2.0 |
+| Carbon Icons | [Carbon Icons](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) | `@carbon/icons@11.92.0` | Apache-2.0 |
+| IBM Plex Sans SC / Mono | [IBM Plex](https://github.com/IBM/plex) | same files as IBM Documentation | SIL Open Font License 1.1 |
+
+Carbon 图标逐文件保存在 `ui/carbon/assets/icons-theme/`，Apache-2.0 全文与
+`SHA256SUMS` 同目录保存。字体文件与 OFL 全文保存在
+`ui/carbon/assets/fonts/`。这些资源只随外置主题包分发，不进入 Nota 核心安装包。

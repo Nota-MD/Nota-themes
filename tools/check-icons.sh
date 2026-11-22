@@ -8,7 +8,7 @@ HERE="$(dirname "$(readlink -f "$0")")"
 cd "$HERE/.."
 
 failed=0
-for theme in adwaita yaru plasma ghub windows windows10 macos; do
+for theme in adwaita yaru plasma ghub windows windows10 macos carbon; do
   css="ui/$theme/theme.css"
   icons="ui/$theme/assets/icons-theme"
   [ -d "$icons" ] || { echo "FAIL: $icons is missing" >&2; failed=1; continue; }
@@ -33,6 +33,12 @@ for theme in adwaita yaru plasma ghub windows windows10 macos; do
     ghub|windows|windows10)
       [ -f "$icons/LICENSE-MIT.txt" ] || {
         echo "FAIL: $theme is missing its MIT icon license" >&2
+        failed=1
+      }
+      ;;
+    carbon)
+      [ -f "$icons/LICENSE-APACHE-2.0.txt" ] || {
+        echo "FAIL: $theme is missing its Apache-2.0 icon license" >&2
         failed=1
       }
       ;;

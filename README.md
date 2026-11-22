@@ -30,17 +30,25 @@ Nota keeps two visual axes independent:
 | Windows 11 | [`ui/windows`](ui/windows/) | `windows` |
 | Windows 10 | [`ui/windows10`](ui/windows10/) | `windows10` |
 | Yaru | [`ui/yaru`](ui/yaru/) | `yaru` |
+| Carbon-inspired | [`ui/carbon`](ui/carbon/) | `carbon` |
 | CDE-inspired | [`ui/cde`](ui/cde/) | `cde` |
 
 The CDE interface theme is intentionally a single classic palette. Nota's global
 light/dark setting is accepted, but both values resolve to the same CDE colors.
 
-Adwaita, Yaru, Breeze, GitHub, Windows 11, Windows 10, and macOS include interface
+Adwaita, Yaru, Breeze, GitHub, Windows 11, Windows 10, macOS, and Carbon include interface
 icons from their corresponding upstream design systems where an exact semantic
 match exists. Icons remain package-local under each theme's
 `assets/icons-theme/` directory and retain the upstream license.
 
-![Theme-native Adwaita icons in Nota settings](docs/images/theme-icons-adwaita.png)
+Showcase screenshots and the website preview pair each interface theme with a
+compatible document theme: Adwaita/Yaru use Adwaita, GitHub uses GitHub,
+Carbon uses IBM Documentation, CDE uses CDE, and the remaining interface themes
+use Minimal. The application itself still keeps the two theme axes independent.
+
+![Light interface theme gallery](docs/images/interface-themes-light.png)
+
+![Dark interface theme gallery](docs/images/interface-themes-dark.png)
 
 ### Install an interface theme
 
@@ -48,8 +56,6 @@ match exists. Icons remain package-local under each theme's
 2. Copy the self-contained theme directory (`<id>/theme.css` plus assets).
 3. The directory name becomes the theme id.
 4. Select the theme under **Interface style**.
-
-![Yaru settings](docs/images/yaru-settings.png)
 
 ## Document themes
 
@@ -67,6 +73,8 @@ match exists. Icons remain package-local under each theme's
 | GitHub Dark | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 | IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
 
+![Document theme gallery](docs/images/document-themes.png)
+
 ### Install a document theme
 
 1. Open **Settings → Document Themes → Open…**.
@@ -76,12 +84,6 @@ match exists. Icons remain package-local under each theme's
 Package rules are documented in [`docs/PACKAGE-SPEC.md`](docs/PACKAGE-SPEC.md).
 The measurements and licensing boundaries used for the current system themes
 are recorded in [`docs/FIGMA-ANALYSIS.md`](docs/FIGMA-ANALYSIS.md).
-
-![CDE-inspired theme](docs/images/cde.png)
-
-![Vellum document theme](docs/images/vellum.png)
-
-![Light and dark interface themes](docs/images/interface-themes-dark.png)
 
 ## Downloads and updates
 
