@@ -446,6 +446,7 @@ GPL-2.0＋字体嵌入例外分发，不改变 Nota 源码许可证；两份许�
 | LaTeX / LaTeX Dark | New Computer Modern Serif、Sans、Mono | GUST Font License；各自 `assets/fonts/NEW-CM-GUST-FONT-LICENSE.md` |
 | Vellum | Special Elite | Apache-2.0；`document/vellum/assets/fonts/SPECIAL-ELITE-APACHE-2.0.txt` |
 | Vellum | Huiwen Mincho GBK / 汇文明朝体GBK | Copyright 2022 TerryWang；作者声明个人及企业可免费商用，无标准 SPDX 协议文本；`document/vellum/assets/fonts/HUIWEN-MINCHO-NOTICE.txt` |
+| IBM Documentation | IBM Plex Sans SC、IBM Plex Mono | SIL Open Font License 1.1；`document/ibm-documentation/assets/fonts/` |
 
 LaTeX 字体来自 LaTeXTypora 所带的同一组 New Computer Modern 文件。上游主题
 本身以 Apache-2.0 发布，但其字体使用 GUST Font License；两份许可都保留在

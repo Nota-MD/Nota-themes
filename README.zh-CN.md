@@ -64,6 +64,7 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
 | Vellum | [`document/vellum/theme.css`](document/vellum/theme.css) |
 | GitHub | [`document/github/theme.css`](document/github/theme.css) |
 | GitHub 深色 | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
+| IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
 
 ### 安装文档主题
 
@@ -108,6 +109,7 @@ Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10 和 macOS 在存在�
   并保留上游 LaTeX 主题的 Apache-2.0 说明
 - Vellum：Special Elite（Apache-2.0）与汇文明朝体 GBK（作者声明允许个人及
   企业免费商用）
+- IBM Documentation：IBM Plex Sans SC 与 IBM Plex Mono（SIL Open Font License 1.1）
 
 每套主题把字体和许可正文放在自己的 `assets/fonts/` 中。这些鸣谢只属于主题包，
 不会同步进 Nota 的“关于 → 鸣谢”窗口。
