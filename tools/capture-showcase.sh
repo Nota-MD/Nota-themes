@@ -56,9 +56,11 @@ write_ui_settings() {
     ghub) document_theme="github" ;;
     carbon) document_theme="ibm-documentation" ;;
     cde) document_theme="cde" ;;
+    cde-solaris) document_theme="cde-solaris" ;;
     plasma|macos|windows|windows10) document_theme="minimal" ;;
   esac
   if [ "$mode" = "dark" ] && [ "$document_theme" != "cde" ] &&
+    [ "$document_theme" != "cde-solaris" ] &&
     [ "$document_theme" != "ibm-documentation" ]; then
     document_theme="$document_theme-dark"
   fi
@@ -162,7 +164,7 @@ Xvfb "$display" -screen 0 1400x900x24 >"$temp_root/xvfb.log" 2>&1 &
 xvfb_pid=$!
 wait_for_display
 
-for theme in adwaita ghub plasma macos windows windows10 yaru carbon cde; do
+for theme in adwaita ghub plasma macos windows windows10 yaru carbon cde cde-solaris; do
   echo "Capturing interface theme: $theme (light)"
   write_ui_settings "$theme" light
   capture "$ui_config" "$ui_out/$theme.png"
@@ -171,7 +173,7 @@ for theme in adwaita ghub plasma macos windows windows10 yaru carbon cde; do
   capture "$ui_config" "$ui_out/$theme-dark.png"
 done
 
-for theme in adwaita adwaita-dark minimal minimal-dark latex latex-dark cde vellum github github-dark ibm-documentation; do
+for theme in adwaita adwaita-dark minimal minimal-dark latex latex-dark cde cde-solaris vellum github github-dark ibm-documentation; do
   echo "Capturing document theme: $theme"
   write_doc_settings "$theme"
   capture "$doc_config" "$doc_out/$theme.png"

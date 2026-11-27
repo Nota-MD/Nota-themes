@@ -22,6 +22,12 @@ for f in \
   ui/carbon/assets/fonts/IBMPlexMono-Regular.woff2 \
   ui/carbon/assets/fonts/IBM-PLEX-SANS-SC-OFL-1.1.txt \
   ui/carbon/assets/fonts/IBM-PLEX-MONO-OFL-1.1.txt \
+  ui/cde/assets/fonts/Nota-WenQuanYi-Bitmap-Song-EBDT-16px.woff2 \
+  ui/cde/assets/fonts/WQY-Bitmap-Song-COPYRIGHT.txt \
+  ui/cde/assets/fonts/GPL-2.0.txt \
+  ui/cde-solaris/assets/fonts/Nota-WenQuanYi-Bitmap-Song-EBDT-16px.woff2 \
+  ui/cde-solaris/assets/fonts/WQY-Bitmap-Song-COPYRIGHT.txt \
+  ui/cde-solaris/assets/fonts/GPL-2.0.txt \
   document/latex/assets/fonts/NewCM10-Book.otf \
   document/latex/assets/fonts/NewCMMono10-Book.otf \
   document/latex/assets/fonts/NEW-CM-GUST-FONT-LICENSE.md \

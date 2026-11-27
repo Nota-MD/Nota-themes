@@ -240,8 +240,8 @@ video {
 
 input[type="checkbox"] { accent-color: var(--accent); }
 
-/* IBM Documentation provides an explicit dark mode. Keep the document theme
-   usable when Nota or the host exposes a dark color preference. */
+/* The default theme follows the operating-system color preference. Explicit
+   fixed variants remain available as separate document themes. */
 @media (prefers-color-scheme: dark) {
   :root {
     --doc-bg: #161616;

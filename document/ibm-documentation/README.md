@@ -1,6 +1,7 @@
 # IBM Documentation
 
-IBM Documentation 风格的 Nota 文档主题。它参考 IBM Documentation 的技术文档气质和 Carbon 中性色体系，保留以下特征：
+IBM Documentation 标准版 Nota 文档主题。它参考 IBM Documentation 的技术
+文档气质和 Carbon 中性色体系，并跟随操作系统亮色或深色偏好自动切换。
 
 - IBM Plex Sans SC 离线中文正文
 - IBM Plex Mono 离线代码字体
@@ -8,7 +9,7 @@ IBM Documentation 风格的 Nota 文档主题。它参考 IBM Documentation 的�
 - 清晰的标题层级和细边框
 - 浅灰代码块、表格表头和辅助区域
 - 蓝色左侧引用线
-- 浅色与深色配色
+- 随系统自动切换 Carbon 亮色与深色纸面、代码块、表格与引用配色
 - 不包含 IBM 标志、网站导航、反馈控件或其他站点级 UI
 
 ## 安装

@@ -47,5 +47,18 @@ for theme in adwaita yaru plasma ghub windows windows10 macos carbon; do
   ( cd "$icons" && sha256sum -c SHA256SUMS --quiet ) || failed=1
 done
 
+for theme in cde cde-solaris; do
+  css="ui/$theme/theme.css"
+  while read -r asset; do
+    [ -n "$asset" ] || continue
+    [ -f "ui/$theme/$asset" ] || {
+      echo "FAIL: $theme references missing $asset" >&2
+      failed=1
+    }
+  done < <(grep -oE 'url\("\./assets/[^"]+"\)' "$css" \
+    | sed 's#^url("./##; s#")$##' \
+    | sort -u)
+done
+
 [ "$failed" = 0 ] || exit 1
 echo "OK: theme image references, licenses, and checksums are complete"

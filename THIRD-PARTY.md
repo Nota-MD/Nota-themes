@@ -171,7 +171,7 @@ Folio 自绘的作品，按 BSD-2-Clause 分发。⚠️ **要搬的是重绘后
 如果有人"顺手"从上游 WebkitWord 或旧 `icons-old/` 里拿，那就是把 GPL 的东西
 搬进 BSD-2 的仓库，性质完全不同。
 
-⚠️ **只搬"动作"图标，不搬应用图标**：`folio-*.svg` 那一套是 Folio 自己的脸，
+⚠️ **只搬"动作"图标，不搬应用图标**：`nota-*.svg` 那一套是 Folio 自己的脸，
 Nota 的图标是用户设计、逆向成 `src-tauri/icons/nota.svg` 的那一份。
 
 ⚠️ **`nota-` 前缀的那几枚不在这一节里**：它们是 Nota 自己画的（`nota-quote` /
@@ -411,8 +411,8 @@ Monoton**（下载目录也有）**鸣谢里写一下徽标字体用的是这个
 
 ## 9. CDE 主题的点阵字体：WenQuanYi Bitmap Song（GPL-2.0 with font embedding exception，**随主题包分发**）
 
-**随外置 CDE 主题包分发，不进入 Nota 安装包**。CDE 外置界面主题与
-CDE 文档主题迁移源使用的
+**随外置 CDE 与 CDE Solaris 主题包分发，不进入 Nota 安装包**。两套外置
+界面主题与对应文档主题使用的
 `Nota WenQuanYi Bitmap Song` 从 **WenQuanYi Bitmap Song 1.0 RC1**
 的完整 16px PCF 生成，原字形与参考项目是
 **AmusementClub/Wenquanyi-Bitmap-Song-TTF**。生成后的 TTF 同时保留
@@ -428,9 +428,9 @@ TTF **无损转成**的 WOFF2 容器；两种容器的字形、cmap 与位图表
 | 修改 | 从完整 16px PCF 生成 TTF；保留全部 ASCII/CJK 位图并嵌入 EBDT/EBLC |
 | 源文件 SHA-256 | `9ef195f67950c47b98d09015e4e4cf8692f82ab3180df04a8697c072d330f0ea`（TTF） |
 | WOFF2 SHA-256 | `beb8fbad0af63498b0c424c7bdcb8e69041b166fe5b1a161b77204287676187b` |
-| 字体位置 | `src/styles/external-themes/cde/assets/fonts/Nota-WenQuanYi-Bitmap-Song-EBDT-16px.{ttf,woff2}`；CSS 加载 WOFF2，TTF 是可编辑源文件 |
-| 完整许可 | 与字体同目录：[`WQY-Bitmap-Song-COPYRIGHT.txt`](src/styles/external-themes/cde/assets/fonts/WQY-Bitmap-Song-COPYRIGHT.txt)＋[`GPL-2.0.txt`](src/styles/external-themes/cde/assets/fonts/GPL-2.0.txt) |
-| 字体说明 | 与字体同目录：[`Nota-WenQuanYi-Bitmap-Song-NOTICE.txt`](src/styles/external-themes/cde/assets/fonts/Nota-WenQuanYi-Bitmap-Song-NOTICE.txt) |
+| 字体位置 | `ui/cde/assets/fonts/` and `ui/cde-solaris/assets/fonts/`；each theme loads its local WOFF2 and keeps the TTF as an editable source |
+| 完整许可 | 与字体同目录：`WQY-Bitmap-Song-COPYRIGHT.txt` 与 `GPL-2.0.txt` |
+| 字体说明 | 与字体同目录：`Nota-WenQuanYi-Bitmap-Song-NOTICE.txt` |
 | 打包位置 | 位于外置主题的 `assets/fonts/`；由该主题自己的 `@font-face` 加载。Nota 的 `tauri.conf.json` 不再复制字体或许可证 |
 
 ⚠️ **根 `LICENSE` 仍然只有 BSD-2-Clause**。字体是独立数据组件，按它自己的
@@ -447,7 +447,7 @@ GPL-2.0＋字体嵌入例外分发，不改变 Nota 源码许可证；两份许�
 | LaTeX / LaTeX Dark | New Computer Modern Serif、Sans、Mono | GUST Font License；各自 `assets/fonts/NEW-CM-GUST-FONT-LICENSE.md` |
 | Vellum | Special Elite | Apache-2.0；`document/vellum/assets/fonts/SPECIAL-ELITE-APACHE-2.0.txt` |
 | Vellum | Huiwen Mincho GBK / 汇文明朝体GBK | Copyright 2022 TerryWang；作者声明个人及企业可免费商用，无标准 SPDX 协议文本；`document/vellum/assets/fonts/HUIWEN-MINCHO-NOTICE.txt` |
-| IBM Documentation | IBM Plex Sans SC、IBM Plex Mono | SIL Open Font License 1.1；`document/ibm-documentation/assets/fonts/` |
+| IBM Documentation / Light / Dark | IBM Plex Sans SC、IBM Plex Mono | SIL Open Font License 1.1；each theme's `assets/fonts/` |
 
 LaTeX 字体来自 LaTeXTypora 所带的同一组 New Computer Modern 文件。上游主题
 本身以 Apache-2.0 发布，但其字体使用 GUST Font License；两份许可都保留在

@@ -32,9 +32,12 @@ Nota 把外观分成两套独立主题：
 | Yaru | [`ui/yaru`](ui/yaru/) | `yaru` |
 | Carbon-inspired | [`ui/carbon`](ui/carbon/) | `carbon` |
 | CDE-inspired | [`ui/cde`](ui/cde/) | `cde` |
+| CDE Solaris | [`ui/cde-solaris`](ui/cde-solaris/) | `cde-solaris` |
 
 CDE 界面主题有意只提供一套经典配色。Nota 的全局明暗设置仍可传入，但浅色和
 深色会命中完全相同的一组 CDE 颜色。
+CDE Solaris 是与经典 CDE 并列的独立主题，采用 Solaris 10 Crimson 调色板：
+窗口主体为 `#AEB2C3`，窗框为 `#B24D7A`。
 
 Adwaita、Yaru、Breeze、GitHub、Windows 11、Windows 10、macOS 和 Carbon 在存在准确语义对应时，
 会使用各自上游设计体系的界面图标。图标保存在各主题的
@@ -66,10 +69,13 @@ Adwaita，GitHub 使用 GitHub，Carbon 使用 IBM Documentation，CDE 使用 CD
 | LaTeX | [`document/latex/theme.css`](document/latex/theme.css) |
 | LaTeX 深色 | [`document/latex-dark/theme.css`](document/latex-dark/theme.css) |
 | CDE | [`document/cde/theme.css`](document/cde/theme.css) |
+| CDE Solaris | [`document/cde-solaris/theme.css`](document/cde-solaris/theme.css) |
 | Vellum | [`document/vellum/theme.css`](document/vellum/theme.css) |
 | GitHub | [`document/github/theme.css`](document/github/theme.css) |
 | GitHub 深色 | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 | IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
+| IBM Documentation 亮色 | [`document/ibm-documentation-light/theme.css`](document/ibm-documentation-light/theme.css) |
+| IBM Documentation 深色 | [`document/ibm-documentation-dark/theme.css`](document/ibm-documentation-dark/theme.css) |
 
 ![文档主题合集](docs/images/document-themes.png)
 

@@ -32,9 +32,12 @@ Nota keeps two visual axes independent:
 | Yaru | [`ui/yaru`](ui/yaru/) | `yaru` |
 | Carbon-inspired | [`ui/carbon`](ui/carbon/) | `carbon` |
 | CDE-inspired | [`ui/cde`](ui/cde/) | `cde` |
+| CDE Solaris | [`ui/cde-solaris`](ui/cde-solaris/) | `cde-solaris` |
 
 The CDE interface theme is intentionally a single classic palette. Nota's global
 light/dark setting is accepted, but both values resolve to the same CDE colors.
+CDE Solaris is a separate theme with the Solaris 10 Crimson palette: a slate
+`#AEB2C3` body and rose `#B24D7A` frame.
 
 Adwaita, Yaru, Breeze, GitHub, Windows 11, Windows 10, macOS, and Carbon include interface
 icons from their corresponding upstream design systems where an exact semantic
@@ -68,10 +71,13 @@ use Minimal. The application itself still keeps the two theme axes independent.
 | LaTeX | [`document/latex/theme.css`](document/latex/theme.css) |
 | LaTeX Dark | [`document/latex-dark/theme.css`](document/latex-dark/theme.css) |
 | CDE-inspired | [`document/cde/theme.css`](document/cde/theme.css) |
+| CDE Solaris | [`document/cde-solaris/theme.css`](document/cde-solaris/theme.css) |
 | Vellum | [`document/vellum/theme.css`](document/vellum/theme.css) |
 | GitHub | [`document/github/theme.css`](document/github/theme.css) |
 | GitHub Dark | [`document/github-dark/theme.css`](document/github-dark/theme.css) |
 | IBM Documentation | [`document/ibm-documentation/theme.css`](document/ibm-documentation/theme.css) |
+| IBM Documentation Light | [`document/ibm-documentation-light/theme.css`](document/ibm-documentation-light/theme.css) |
+| IBM Documentation Dark | [`document/ibm-documentation-dark/theme.css`](document/ibm-documentation-dark/theme.css) |
 
 ![Document theme gallery](docs/images/document-themes.png)
 

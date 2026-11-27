@@ -324,27 +324,27 @@
 
 /* Theme-native interface icons from octicon. */
 [data-ui-style="ghub"] {
-  --icon-folio-document-open-symbolic: url("./assets/icons-theme/document-open.svg");
-  --icon-folio-document-new-symbolic: url("./assets/icons-theme/document-new.svg");
-  --icon-folio-close-symbolic: url("./assets/icons-theme/close.svg");
-  --icon-folio-configure-symbolic: url("./assets/icons-theme/configure.svg");
+  --icon-nota-document-open-symbolic: url("./assets/icons-theme/document-open.svg");
+  --icon-nota-document-new-symbolic: url("./assets/icons-theme/document-new.svg");
+  --icon-nota-close-symbolic: url("./assets/icons-theme/close.svg");
+  --icon-nota-configure-symbolic: url("./assets/icons-theme/configure.svg");
   --icon-nota-plugin-symbolic: url("./assets/icons-theme/plugin.svg");
-  --icon-folio-window-symbolic: url("./assets/icons-theme/window.svg");
-  --icon-folio-columns-symbolic: url("./assets/icons-theme/columns.svg");
-  --icon-folio-insert-image-symbolic: url("./assets/icons-theme/image.svg");
-  --icon-folio-insert-code-symbolic: url("./assets/icons-theme/code.svg");
+  --icon-nota-window-symbolic: url("./assets/icons-theme/window.svg");
+  --icon-nota-columns-symbolic: url("./assets/icons-theme/columns.svg");
+  --icon-nota-insert-image-symbolic: url("./assets/icons-theme/image.svg");
+  --icon-nota-insert-code-symbolic: url("./assets/icons-theme/code.svg");
   --icon-nota-inline-code-symbolic: url("./assets/icons-theme/code.svg");
   --icon-nota-code-block-symbolic: url("./assets/icons-theme/code-block.svg");
-  --icon-folio-insert-link-symbolic: url("./assets/icons-theme/link.svg");
-  --icon-folio-edit-find-symbolic: url("./assets/icons-theme/find.svg");
-  --icon-folio-edit-copy-symbolic: url("./assets/icons-theme/copy.svg");
-  --icon-folio-edit-paste-symbolic: url("./assets/icons-theme/paste.svg");
-  --icon-folio-delete-symbolic: url("./assets/icons-theme/delete.svg");
-  --icon-folio-format-text-bold-symbolic: url("./assets/icons-theme/bold.svg");
-  --icon-folio-format-text-italic-symbolic: url("./assets/icons-theme/italic.svg");
-  --icon-folio-view-list-bullet-symbolic: url("./assets/icons-theme/list-bullet.svg");
-  --icon-folio-view-list-ordered-symbolic: url("./assets/icons-theme/list-ordered.svg");
-  --icon-folio-view-more-horizontal-symbolic: url("./assets/icons-theme/more.svg");
+  --icon-nota-insert-link-symbolic: url("./assets/icons-theme/link.svg");
+  --icon-nota-edit-find-symbolic: url("./assets/icons-theme/find.svg");
+  --icon-nota-edit-copy-symbolic: url("./assets/icons-theme/copy.svg");
+  --icon-nota-edit-paste-symbolic: url("./assets/icons-theme/paste.svg");
+  --icon-nota-delete-symbolic: url("./assets/icons-theme/delete.svg");
+  --icon-nota-format-text-bold-symbolic: url("./assets/icons-theme/bold.svg");
+  --icon-nota-format-text-italic-symbolic: url("./assets/icons-theme/italic.svg");
+  --icon-nota-view-list-bullet-symbolic: url("./assets/icons-theme/list-bullet.svg");
+  --icon-nota-view-list-ordered-symbolic: url("./assets/icons-theme/list-ordered.svg");
+  --icon-nota-view-more-horizontal-symbolic: url("./assets/icons-theme/more.svg");
   --icon-nota-quote-symbolic: url("./assets/icons-theme/quote.svg");
   --icon-nota-task-symbolic: url("./assets/icons-theme/task.svg");
   --icon-nota-unfold-more-symbolic: url("./assets/icons-theme/unfold.svg");
